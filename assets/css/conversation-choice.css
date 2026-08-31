@@ -1,0 +1,226 @@
+/*COMMENT: §§§ SECTION 1: CONVERSATION CHOICE FRAME §§§*/
+/*COMMENT: [TURN REFLECTION INTO AN OWNER-DIRECTED NEXT STEP]*/
+.conversation-choice-page {
+    min-height: 100vh;
+    background: var(--color-warm-bone);
+    color: var(--color-near-black);
+}
+
+.site-header--conversation-choice {
+    border-bottom: 0;
+}
+
+.conversation-choice-main {
+    overflow: hidden;
+}
+
+.conversation-choice {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    padding: clamp(2.15rem, 5.1vw, 4.7rem) var(--page-gutter) clamp(3rem, 5.1vw, 4.7rem);
+}
+
+.conversation-choice__intro {
+    max-width: 60rem;
+    display: grid;
+    gap: 0.7rem;
+    margin-bottom: clamp(1.75rem, 3.4vw, 3.2rem);
+}
+
+.conversation-choice__intro h1 {
+    max-width: 18ch;
+    font-size: clamp(2.8rem, 5.5vw, 5.9rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+/*COMMENT: §§§ SECTION 2: CONVERSATION PATHS §§§*/
+/*COMMENT: [MAKE EACH COMPLETE PATH THE INTERACTION RATHER THAN ITS INDIVIDUAL TEXT ELEMENTS]*/
+.conversation-choice__paths {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid rgba(31, 28, 31, 0.13);
+    border-bottom: 1px solid rgba(31, 28, 31, 0.13);
+}
+
+.conversation-choice__path {
+    display: grid;
+    grid-template-rows: auto minmax(5.5rem, auto) minmax(4rem, auto) auto;
+    align-content: start;
+    gap: 0.85rem;
+    min-height: 17.25rem;
+    padding: clamp(1.2rem, 2.05vw, 2rem);
+    color: var(--color-near-black);
+    transition: background var(--transition-medium), color var(--transition-medium);
+}
+
+.conversation-choice__path + .conversation-choice__path {
+    border-left: 1px solid rgba(31, 28, 31, 0.13);
+}
+
+.conversation-choice__path.is-attended,
+.conversation-choice__path:focus-visible {
+    background: var(--color-smoky-aubergine);
+    color: var(--color-warm-bone);
+}
+
+.conversation-choice__path:active {
+    background: var(--color-ink-plum);
+    color: var(--color-warm-bone);
+}
+
+.conversation-choice__signal {
+    font-size: var(--step--1);
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-patinated-teal);
+    transition: color var(--transition-medium);
+}
+
+.conversation-choice__title {
+    align-self: end;
+    max-width: 15ch;
+    font-size: clamp(1.65rem, 2.4vw, 2.65rem);
+    font-weight: 470;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.conversation-choice__description {
+    max-width: 35ch;
+    font-size: 0.96rem;
+    line-height: 1.58;
+    color: rgba(31, 28, 31, 0.70);
+    transition: color var(--transition-medium);
+}
+
+.conversation-choice__action {
+    justify-self: start;
+    padding-bottom: 0.18rem;
+    border-bottom: 1px solid currentColor;
+    font-weight: 620;
+    transition: border-color var(--transition-medium);
+}
+
+.conversation-choice__action > span {
+    transition: color var(--transition-medium), transform var(--transition-medium);
+}
+
+.conversation-choice__path.is-attended .conversation-choice__action,
+.conversation-choice__path:focus-visible .conversation-choice__action {
+    border-bottom-color: var(--color-patinated-teal);
+}
+
+.conversation-choice__path.is-attended .conversation-choice__action > span,
+.conversation-choice__path:focus-visible .conversation-choice__action > span {
+    color: var(--color-patinated-teal);
+    transform: translateX(0.12rem);
+}
+
+.conversation-choice__path.is-attended .conversation-choice__signal,
+.conversation-choice__path:focus-visible .conversation-choice__signal,
+.conversation-choice__path.is-attended .conversation-choice__description,
+.conversation-choice__path:focus-visible .conversation-choice__description {
+    color: inherit;
+}
+
+/*COMMENT: §§§ SECTION 3: RESPONSIVE CONVERSATION CHOICE §§§*/
+/*COMMENT: [PRESERVE COMPLETE-PATH INTERACTION ACROSS SMALLER VIEWPORTS]*/
+@media (max-width: 980px) {
+    .conversation-choice__paths {
+        grid-template-columns: 1fr;
+    }
+
+    .conversation-choice__path {
+        min-height: 0;
+        grid-template-columns: minmax(5.2rem, 0.38fr) minmax(0, 1.62fr) auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        justify-items: stretch;
+        gap: 0.35rem 1.1rem;
+        padding: clamp(1.15rem, 3vw, 1.65rem) 0.25rem;
+    }
+
+    .conversation-choice__path + .conversation-choice__path {
+        border-left: 0;
+        border-top: 1px solid rgba(31, 28, 31, 0.13);
+    }
+
+    .conversation-choice__signal {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: start;
+        padding-top: 0.2rem;
+    }
+
+    .conversation-choice__title {
+        grid-column: 2;
+        grid-row: 1;
+        max-width: 24ch;
+        font-size: clamp(1.45rem, 4vw, 2rem);
+    }
+
+    .conversation-choice__description {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 52ch;
+    }
+
+    .conversation-choice__action {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        align-self: center;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .conversation-choice {
+        padding-top: var(--space-4);
+        padding-bottom: var(--space-4);
+    }
+
+    .conversation-choice__intro h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .conversation-choice__path {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        gap: 0.45rem 1rem;
+        padding: 1.2rem 0;
+    }
+
+    .conversation-choice__signal {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding-top: 0;
+    }
+
+    .conversation-choice__title {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+
+    .conversation-choice__description {
+        grid-column: 1;
+        grid-row: 3;
+        padding-right: 0.5rem;
+    }
+
+    .conversation-choice__action {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        font-size: 0.86rem;
+    }
+}
+
+@media (hover: none) {
+    .conversation-choice__path:active,
+    .conversation-choice__path:focus-visible {
+        background: var(--color-smoky-aubergine);
+        color: var(--color-warm-bone);
+    }
+}
