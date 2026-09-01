@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1400" viewBox="0 0 2800 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Stock image placeholder — owner-managed business environment</title>
+  <desc id="desc">Quiet photography placeholder indicating subject and intended crop. Full art direction is documented separately.</desc>
+  <rect width="2800" height="1400" fill="#D8D5D2"/>
+  <rect x="98" y="49" width="2604" height="1302" fill="none" stroke="#B9B4AF" stroke-width="3" stroke-dasharray="18 14"/>
+  <text x="1400" y="654" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="700" letter-spacing="3" fill="#282232">STOCK IMAGE PLACEHOLDER</text>
+  <text x="1400" y="713" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#534259">Owner-managed business environment</text>
+  <text x="1400" y="775" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#6E6670">Wide editorial crop · documentary, not staged</text>
+  <text x="1400" y="832" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#6E6670">Max display area: 1280 × 320 px</text>
+</svg>

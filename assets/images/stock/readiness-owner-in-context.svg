@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2400" viewBox="0 0 1800 2400" role="img" aria-labelledby="title desc">
+  <title id="title">Stock image placeholder — owner in context</title>
+  <desc id="desc">Quiet photography placeholder indicating subject and intended crop. Full art direction is documented separately.</desc>
+  <rect width="1800" height="2400" fill="#D8D5D2"/>
+  <rect x="63" y="84" width="1674" height="2232" fill="none" stroke="#B9B4AF" stroke-width="3" stroke-dasharray="18 14"/>
+  <text x="900" y="1142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="63" font-weight="700" letter-spacing="3" fill="#282232">STOCK IMAGE PLACEHOLDER</text>
+  <text x="900" y="1216" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="47" fill="#534259">Owner in context</text>
+  <text x="900" y="1296" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#6E6670">Vertical editorial crop · candid, not staged</text>
+</svg>

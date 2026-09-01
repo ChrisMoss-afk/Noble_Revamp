@@ -1,0 +1,153 @@
+/*COMMENT: §§§ SECTION 1: DRAWER MENU §§§*/
+/*COMMENT: [DEFINE DRAWER MENU STYLES]*/
+.menu-drawer {
+    position: fixed;
+    z-index: 160;
+    inset: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-drawer[aria-hidden="false"] {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu-drawer__scrim {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    background: rgba(31,28,31,0.42);
+    opacity: 0;
+    transition: opacity var(--transition-medium);
+}
+
+.menu-drawer[aria-hidden="false"] .menu-drawer__scrim {
+    opacity: 1;
+}
+
+.menu-drawer__panel {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: min(34rem, 92vw);
+    background: var(--color-ink-plum);
+    color: var(--color-warm-bone);
+    padding: var(--space-3) var(--space-4);
+    transform: translateX(100%);
+    transition: transform var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-drawer[aria-hidden="false"] .menu-drawer__panel {
+    transform: translateX(0);
+}
+
+.menu-drawer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-4);
+    font-size: var(--step--1);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.menu-drawer__header button {
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.menu-drawer__header button:hover,
+.menu-drawer__header button:focus-visible {
+    color: var(--color-patinated-teal);
+}
+
+.menu-drawer__links {
+    display: grid;
+    gap: 0;
+}
+
+.menu-drawer__links a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1rem 0.7rem;
+    border-top: 1px solid rgba(244,239,232,0.18);
+    font-size: var(--step-2);
+    line-height: 1.18;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.menu-drawer__links a > span:last-child {
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.menu-drawer__links a:hover,
+.menu-drawer__links a:focus-visible {
+    background: var(--color-smoky-aubergine);
+}
+
+.menu-drawer__links a:hover > span:last-child,
+.menu-drawer__links a:focus-visible > span:last-child {
+    color: var(--color-patinated-teal);
+    transform: translateX(0.18rem);
+}
+
+.menu-drawer__links a:last-child {
+    border-bottom: 1px solid rgba(244,239,232,0.18);
+}
+
+
+.menu-drawer__utility {
+    margin-top: auto;
+    display: grid;
+    gap: 0.7rem;
+    padding-top: var(--space-3);
+    border-top: 1px solid rgba(244, 239, 232, 0.18);
+    font-size: var(--step--1);
+    color: rgba(244, 239, 232, 0.76);
+}
+
+.menu-drawer__utility-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.4rem;
+}
+
+.menu-drawer__utility a:hover,
+.menu-drawer__utility a:focus-visible {
+    color: var(--color-patinated-teal);
+}
+
+body.has-open-menu {
+    overflow: hidden;
+}
+
+
+/*COMMENT: [SURFACE ACTIVE CHAPTER STATE INSIDE THE DRAWER]*/
+.menu-drawer__links a[aria-current="step"],
+.menu-drawer__links a[aria-current="page"] {
+    color: var(--color-white-soft);
+}
+
+.menu-drawer__links a[aria-current="step"] > span:last-child,
+.menu-drawer__links a[aria-current="page"] > span:last-child {
+    color: var(--color-patinated-teal);
+}
+
+@media (max-width: 720px) {
+    .menu-drawer__header button {
+        min-height: 3rem;
+        min-width: 3rem;
+    }
+
+    .menu-drawer__links a {
+        min-height: 3.25rem;
+        align-items: center;
+    }
+}
