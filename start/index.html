@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Enter Noble through four questions that help business owners consider direction, value, independence, and outcome.">
+<title>Four Questions | Noble Advisory Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/front-door.css">
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/front-door.js" defer></script>
+</head>
+<body class="front-door-page">
+<a class="skip-link" href="#front-door-main">Skip to Four Questions</a>
+<header class="site-header site-header--front-door">
+  <a class="site-header__brand" href="../index.html" aria-label="Noble Advisory Group home"><img src="../assets/brand/noble-logo-primary.svg" alt="Noble Advisory Group"></a>
+  <div class="site-header__context">Four Questions</div>
+  <button class="site-header__menu" type="button" data-menu-open aria-controls="front-door-menu" aria-expanded="false">Menu +</button>
+</header>
+
+<div class="menu-drawer" id="front-door-menu" data-menu aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="front-door-menu-title">
+  <button class="menu-drawer__scrim" type="button" data-menu-close aria-label="Close menu"></button>
+  <div class="menu-drawer__panel">
+    <header class="menu-drawer__header"><span id="front-door-menu-title">Noble</span><button type="button" data-menu-close>Close</button></header>
+    <nav class="menu-drawer__links" aria-label="Noble destinations">
+      <a href="../start/index.html" aria-current="page"><span>Enter Noble</span><span>→</span></a>
+      <a href="../explore/index.html#working-with-noble"><span>Explore Noble</span><span>→</span></a>
+      <a href="../advisors/index.html"><span>Your Advisors</span><span>→</span></a>
+      <a href="../contact/index.html"><span>Start a Conversation</span><span>→</span></a>
+    </nav>
+    <div class="menu-drawer__utility"><span>Rooted in Western Canada.</span><div class="menu-drawer__utility-links"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="../contact/index.html">Contact</a></div></div>
+  </div>
+</div>
+
+<main class="front-door-main" id="front-door-main">
+  <!--COMMENT: §§§ SECTION 1: FOUR QUESTIONS / OWNER REFLECTION §§§-->
+  <section class="front-door-questions" aria-labelledby="front-door-questions-title">
+    <h1 class="visually-hidden" id="front-door-questions-title">Four Questions</h1>
+
+    <!--COMMENT: [MAKE EACH QUESTION EXPLORABLE WITHOUT ASSIGNING A DEFAULT PRIORITY]-->
+    <div class="front-door-questions__field" data-front-door-questions role="group" aria-label="Explore the Four Questions">
+      <button class="front-door-question" type="button" data-question-trigger="direction" aria-expanded="false" aria-controls="front-door-question-detail">
+        <span class="front-door-question__label">Direction</span>
+        <span class="front-door-question__prompt">Where is your business headed?</span>
+        <span class="front-door-question__cue" aria-hidden="true"></span>
+      </button>
+      <button class="front-door-question" type="button" data-question-trigger="value" aria-expanded="false" aria-controls="front-door-question-detail">
+        <span class="front-door-question__label">Value</span>
+        <span class="front-door-question__prompt">What makes your business valuable today, and what could strengthen its value for what comes next?</span>
+        <span class="front-door-question__cue" aria-hidden="true"></span>
+      </button>
+      <button class="front-door-question" type="button" data-question-trigger="independence" aria-expanded="false" aria-controls="front-door-question-detail">
+        <span class="front-door-question__label">Independence</span>
+        <span class="front-door-question__prompt">How much does your business depend on you?</span>
+        <span class="front-door-question__cue" aria-hidden="true"></span>
+      </button>
+      <button class="front-door-question" type="button" data-question-trigger="outcome" aria-expanded="false" aria-controls="front-door-question-detail">
+        <span class="front-door-question__label">Outcome</span>
+        <span class="front-door-question__prompt">What does a successful transition look like for you?</span>
+        <span class="front-door-question__cue" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!--COMMENT: [SURFACE WHY THE SELECTED QUESTION MATTERS TO THE OWNER]-->
+    <section class="front-door-question-detail" id="front-door-question-detail" data-question-detail role="region" aria-live="polite" hidden>
+      <span class="front-door-question-detail__label" data-question-detail-label></span>
+      <p data-question-detail-copy></p>
+    </section>
+
+    <!--COMMENT: [CONNECT DIFFERENT ANSWERS TO THE VALUE OF PREPARATION]-->
+    <div class="front-door-questions__conclusion">
+      <div class="front-door-questions__conclusion-copy">
+        <h2>Every business answers them differently.</h2>
+        <p>Pressure narrows your options. <strong>Preparation</strong> gives you room to choose.</p>
+      </div>
+      <a class="front-door-questions__next" href="conversation/index.html">
+        <span>Choose the conversation you are ready for</span>
+        <span class="front-door-questions__next-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.4"></circle><path d="M21 32H44M35 22L45 32L35 42" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!--COMMENT: §§§ SHARED COMPONENT: COMPACT FIRM FOOTER §§§-->
+<footer class="firm-footer" data-firm-footer>
+  <div class="firm-footer__inner">
+    <section class="firm-footer__identity" aria-label="Noble Advisory Group">
+      <a class="firm-footer__mark" href="../index.html" aria-label="Noble Advisory Group home"><img src="../assets/brand/noble-custom-footer-n.svg" alt=""></a>
+      <p>A modern approach to advisory, built around you and your business.</p>
+      <span>Rooted in Western Canada.</span>
+    </section>
+    <nav class="firm-footer__group" aria-label="Noble destinations">
+      <h2>Navigate</h2>
+      <a href="../start/index.html">Enter Noble</a>
+      <a href="../explore/index.html#working-with-noble">Explore Noble</a>
+      <a href="../advisors/index.html">Your Advisors</a>
+    </nav>
+    <section class="firm-footer__group">
+      <h2>Contact</h2>
+      <a href="../contact/index.html">Start a Conversation</a>
+      <a href="tel:+14038675309">(403) 867.5309</a>
+      <a href="mailto:Advisor@NobleAdvisoryGroup.ca">Advisor@NobleAdvisoryGroup.ca</a>
+    </section>
+    <section class="firm-footer__group">
+      <h2>Connect</h2>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <span>Company profile URL pending</span>
+    </section>
+    <div class="firm-footer__legal">
+      <p>© 2026 Noble Advisory Group</p>
+      <div><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
